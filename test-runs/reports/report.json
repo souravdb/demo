@@ -1,0 +1,396 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-02T23:19:50.597Z",
+    "end": "2022-03-02T23:19:52.933Z",
+    "duration": 2336,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c543fa95-c00a-464c-980a-cfa3711ddfc9",
+      "title": "",
+      "fullFile": "cypress/test-suite/end-to-end/about.spec.js",
+      "file": "cypress/test-suite/end-to-end/about.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6ee6334-31b5-43ca-a82c-7b4d80485fa7",
+          "title": "Header...",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "653381d4-67aa-44dc-9669-66efd92dc665",
+              "title": "720p resolution",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [],
+              "suites": [
+                {
+                  "uuid": "2555b014-73d6-407c-8b41-e0d0217da27e",
+                  "title": "When you visit home",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Should visit home page",
+                      "fullTitle": "Header... 720p resolution When you visit home Should visit home page",
+                      "timedOut": null,
+                      "duration": 888,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.visit('/');",
+                      "err": {},
+                      "uuid": "6f361a87-6b00-43f9-a0d1-11bcc9951f45",
+                      "parentUUID": "2555b014-73d6-407c-8b41-e0d0217da27e",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [
+                    {
+                      "uuid": "2cdf23d3-9a60-4a44-acdd-9b142239e333",
+                      "title": "nav",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Should navigate to About page",
+                          "fullTitle": "Header... 720p resolution When you visit home nav Should navigate to About page",
+                          "timedOut": null,
+                          "duration": 148,
+                          "state": "passed",
+                          "speed": "fast",
+                          "pass": true,
+                          "fail": false,
+                          "pending": false,
+                          "context": null,
+                          "code": "cy.get('[data-cy=nav-item]').contains('About').click({\n  force: true\n});\ncy.get('[data-cy=about-me-label]').should('contain', 'About Me');",
+                          "err": {},
+                          "uuid": "f0266f2a-8c35-4095-b8de-f3f53491184c",
+                          "parentUUID": "2cdf23d3-9a60-4a44-acdd-9b142239e333",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [
+                        "f0266f2a-8c35-4095-b8de-f3f53491184c"
+                      ],
+                      "failures": [],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 148,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    }
+                  ],
+                  "passes": [
+                    "6f361a87-6b00-43f9-a0d1-11bcc9951f45"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 888,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "15ca4e7f-ceb6-429e-b63c-fa1f2a07cc47",
+          "title": "About Page...",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b5f2eafb-7df6-44d3-be31-89d8738e913b",
+              "title": "When you visit home",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Should visit home page",
+                  "fullTitle": "About Page... When you visit home Should visit home page",
+                  "timedOut": null,
+                  "duration": 1149,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('/');",
+                  "err": {},
+                  "uuid": "67fb895f-0902-4712-83a3-eeebb31f1a12",
+                  "parentUUID": "b5f2eafb-7df6-44d3-be31-89d8738e913b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [
+                {
+                  "uuid": "1f974538-4650-4a56-9217-c5c59dd66950",
+                  "title": "profile",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Should have image",
+                      "fullTitle": "About Page... When you visit home profile Should have image",
+                      "timedOut": null,
+                      "duration": 22,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.get('[data-cy=about-pic]').should('exist');\ncy.get('[data-cy=about-pic]').should('have.attr', 'title').should('contain', 'Sourav, Deb Barma');",
+                      "err": {},
+                      "uuid": "4d080c94-87e4-4036-b2a9-6b717f3be616",
+                      "parentUUID": "1f974538-4650-4a56-9217-c5c59dd66950",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "4d080c94-87e4-4036-b2a9-6b717f3be616"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 22,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "93e12169-0eb0-4a32-af8a-5e1c7bf0241e",
+                  "title": "intro",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Should have keywords",
+                      "fullTitle": "About Page... When you visit home intro Should have keywords",
+                      "timedOut": null,
+                      "duration": 16,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.get('[data-cy=about-me-label]').should('contain', 'About Me'); // cy.wrap(['director', 'engineering', 'test automation', 'quality', 'Azure']).each((keyword) => {\n// \tcy.get('[data-cy=about-intro]').contains(RegExp(`${keyword}`, 'i'))\n// })",
+                      "err": {},
+                      "uuid": "17adcd96-cf8d-472c-94b9-07787ffd56c8",
+                      "parentUUID": "93e12169-0eb0-4a32-af8a-5e1c7bf0241e",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "17adcd96-cf8d-472c-94b9-07787ffd56c8"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 16,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "b810ee92-b805-4afe-bf16-a2233a39849e",
+                  "title": "contact",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Should have keywords",
+                      "fullTitle": "About Page... When you visit home contact Should have keywords",
+                      "timedOut": null,
+                      "duration": 10,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.get('[data-cy=about-contact-label]').should('contain', 'Contact'); // cy.wrap(['469 803 8830', 'souravd.now@gmail.com', 'Woodstock']).each((keyword) => {\n// \tcy.get('[data-cy=about-contact]').contains(RegExp(`${keyword}`, 'i'))\n// })",
+                      "err": {},
+                      "uuid": "7548744e-f3bf-479d-b034-7caf9cb62e6d",
+                      "parentUUID": "b810ee92-b805-4afe-bf16-a2233a39849e",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "7548744e-f3bf-479d-b034-7caf9cb62e6d"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 10,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "7fc6d8e8-1c2f-4a32-9f1c-b00156ee74d2",
+                  "title": "education",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Should have keywords",
+                      "fullTitle": "About Page... When you visit home education Should have keywords",
+                      "timedOut": null,
+                      "duration": 29,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": null,
+                      "code": "cy.get('[data-cy=about-education-label]').should('contain', 'Education'); // cy.wrap(['Bachelors', 'Engineering', 'Jadavpur University']).each((keyword) => {\n// \tcy.get('[data-cy=about-education]').contains(RegExp(`${keyword}`, 'i'))\n// })",
+                      "err": {},
+                      "uuid": "88ffb30b-6302-495c-bcc5-89a6c2295ae5",
+                      "parentUUID": "7fc6d8e8-1c2f-4a32-9f1c-b00156ee74d2",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "88ffb30b-6302-495c-bcc5-89a6c2295ae5"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 29,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [
+                "67fb895f-0902-4712-83a3-eeebb31f1a12"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1149,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test-runs/reports",
+        "reportFilename": "report"
+      },
+      "version": "6.1.0"
+    }
+  }
+}
