@@ -37,7 +37,9 @@ jobs:
       with:
         runTests: false
         build: npm run build --if-present
-    
+
+
+
     - name: Run Cypress Test Suite
       run: npm run cypress:run:reporter
       continue-on-error: true

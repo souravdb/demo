@@ -1,0 +1,12 @@
+{
+    "baseUrl": "http://localhost:3000/",
+    "fixturesFolder": "cypress/test-data",
+    "integrationFolder": "cypress/test-suite",
+    "videosFolder": "cypress/videos",
+    "supportFile": "cypress/support",
+    "pluginsFile": "cypress/plugins",
+    "reporterOptions": {
+        "reportDir": "test-runs/reports",
+        "reportFilename": "report"
+    }
+}
