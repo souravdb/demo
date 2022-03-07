@@ -15,13 +15,13 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          when: always
-          paths:
+          path: |
             - cypress/videos/**/*.mp4
             - cypress/screenshots/**/*.png
             - cypress/test-results/**/*.html
           expire_in: 1 day
-
+          when: always
+          
 # jobs:
 #   cache-npm-build:
 #     runs-on: ubuntu-20.04
