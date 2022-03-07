@@ -19,8 +19,8 @@ jobs:
             - cypress/videos/**/*.mp4
             - cypress/screenshots/**/*.png
             - cypress/test-results/**/*.html
-          expire_in: 1 day
-          when: always
+#           expire_in: 1 day
+#           when: always
           
 # jobs:
 #   cache-npm-build:
