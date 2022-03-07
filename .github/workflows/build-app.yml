@@ -13,6 +13,14 @@ jobs:
           build: npm run build
           start: npm run cy:run:reporter
 
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+      - cypress/test-results/**/*.html
+    expire_in: 1 day
+
 # jobs:
 #   cache-npm-build:
 #     runs-on: ubuntu-20.04
