@@ -28,9 +28,9 @@ jobs:
 
   test-cypress:
     needs: cache-npm-build
-      runs-on: ubuntu-20.04
-      container: cypress/browsers:node14.17.0-chrome91-ff89
-      steps:
-        - uses: cypress-io/github-action@v2
-        with:
-          start: npm run cy:run:reporter
+    runs-on: ubuntu-20.04
+    container: cypress/browsers:node14.17.0-chrome91-ff89
+    steps:
+      - uses: cypress-io/github-action@v2
+      with:
+        start: npm run cy:run:reporter
