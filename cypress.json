@@ -1,12 +1,13 @@
 {
-    "baseUrl": "http://localhost:3000/",
-    "fixturesFolder": "cypress/test-data",
-    "integrationFolder": "cypress/test-suite",
-    "videosFolder": "cypress/videos",
-    "supportFile": "cypress/support",
-    "pluginsFile": "cypress/plugins",
+    "baseUrl": "http://localhost:3000",
+    "pluginsFile": false,
+    "fixturesFolder": false,
     "reporterOptions": {
-        "reportDir": "test-runs/reports",
-        "reportFilename": "report"
-    }
+        "reportDir": "cypress/test-results",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "timestamp": "mmddyyyy_HHMMss"
+    },
+    "trashAssetsBeforeRuns": true
 }
