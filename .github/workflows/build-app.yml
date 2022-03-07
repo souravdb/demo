@@ -13,13 +13,14 @@ jobs:
           build: npm run build
           start: npm run cy:run:reporter
 
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-      - cypress/test-results/**/*.html
-    expire_in: 1 day
+      - uses: actions/upload-artifact@v2
+        with:
+          when: always
+          paths:
+            - cypress/videos/**/*.mp4
+            - cypress/screenshots/**/*.png
+            - cypress/test-results/**/*.html
+          expire_in: 1 day
 
 # jobs:
 #   cache-npm-build:
