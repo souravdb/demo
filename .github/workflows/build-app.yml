@@ -3,9 +3,10 @@ name: Build & Test
 on: [push]
 
 jobs:
-  cypress-run:
+  build-nextjs-run-cypress-tests:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome91-ff89
+    
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
@@ -19,11 +20,17 @@ jobs:
         run: |
           npm run cy:run:reporter
       
-      - name: archive test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-report
-          path: cypress/test-results/*.html
+      - name: copy test results
+        run: |
+          mkdir public
+          cp -r cypress/test-results public/test-results
+          cp -r cypress/videos public/videos
+          
+#       - name: archive test results
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: test-report
+#           path: cypress/test-results/*.html
           
 # jobs:
 #   cache-npm-build:
