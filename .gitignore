@@ -7,12 +7,9 @@
 
 # testing
 /mochawesome-report
-/test-results/assets
-/test-results/*.json
 /coverage
 /.nyc_output
-/cypress/videos/*
-/cypress/screenshots/*
+
 
 # next.js
 /.next/
