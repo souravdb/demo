@@ -7,20 +7,23 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome91-ff89
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
+      - name: checkout repository
+        uses: actions/checkout@v2
+      
+      - name: npm install, and build code
+        run: |
+          npm install
+          npm run build --if-present
+      
+      - name: npm run, and report tests
+        run: |
+          npm run cy:run:reporter
+      
+      - name: archive test results
+        uses: actions/upload-artifact@v3
         with:
-          build: npm run build
-          start: npm run cy:run:reporter
-
-      - uses: actions/upload-artifact@v2
-        with:
-          path: |
-            - cypress/videos/**/*.mp4
-            - cypress/screenshots/**/*.png
-            - cypress/test-results/**/*.html
-#           expire_in: 1 day
-#           when: always
+          name: test-report
+          path: cypress/test-results/result.html
           
 # jobs:
 #   cache-npm-build:
