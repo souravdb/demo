@@ -22,6 +22,7 @@ jobs:
       
       - name: copy test results
         run: |
+          mkdir public
           cp -r cypress/test-results public/test-results
           cp -r cypress/videos public/videos
         
