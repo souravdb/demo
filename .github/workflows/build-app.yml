@@ -19,13 +19,18 @@ jobs:
           npm install
           npm run build --if-present
       
+      - name: npm run, and report tests
+        working-directory: ${{env.work-dir}}
+        run: |
+          npm run cy:run:reporter
+
       - name: copy test results
         working-directory: ${{env.work-dir}}
         run: |
           cp -r cypress/videos public/videos
       
-      # - name: Merge test reports
-      #   run: npm run combine:report
+      - name: Merge test reports
+        run: npm run combine:report
 
       - name: Generate HTML report
         run: npm run generate:report
