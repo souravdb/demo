@@ -2,12 +2,10 @@
     "baseUrl": "http://localhost:3000",
     "pluginsFile": false,
     "fixturesFolder": false,
+    "reporter": "mochawesome",
     "reporterOptions": {
-        "reportDir": "cypress/test-results",
-        "reportFilename": "report",
-        "overwrite": true,
-        "html": true,
-        "timestamp": "mmddyyyy_HHMMss"
-    },
-    "trashAssetsBeforeRuns": true
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
 }

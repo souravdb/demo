@@ -6,7 +6,9 @@
 		"cy:test": "cypress run --reporter mochawesome",
 		"cy:run:reporter": "start-server-and-test start-server http://localhost:3000 cy:test",
 		"cy:run:chrome": "cypress run --browser chrome",
-		"cy:open": "cypress open"
+		"cy:open": "cypress open",
+		"combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
+		"generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
 	},
 	"dependencies": {
 		"graphql": "^16.3.0",
@@ -24,6 +26,8 @@
 		"autoprefixer": "^10.4.0",
 		"cypress": "^9.5.1",
 		"mochawesome": "^7.1.0",
+		"mochawesome-merge": "^4.2.1",
+		"mochawesome-report-generator": "^6.1.1",
 		"postcss": "^8.4.5",
 		"start-server-and-test": "^1.14.0",
 		"tailwindcss": "^3.0.7"

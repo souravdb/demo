@@ -3,57 +3,46 @@ name: Build & Test
 on: [push]
 
 jobs:
-  cypress-run:
+  build-nextjs-run-cypress-tests:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome91-ff89
+    env:
+      working-directory: ./app
+    
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
       
       - name: npm install, and build code
+        working-directory: ${{env.work-dir}}
         run: |
           npm install
           npm run build --if-present
       
-      - name: npm run, and report tests
+      - name: copy test results
+        working-directory: ${{env.work-dir}}
         run: |
-          npm run cy:run:reporter
+          cp -r cypress/videos public/videos
       
-      - name: archive test results
-        uses: actions/upload-artifact@v3
+      - name: Merge test reports
+        run: npm run combine:report
+
+      - name: Generate HTML report
+        run: npm run generate:report
+      
+      - name: Deploy report page to GitHub Page
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: test-report
-          path: cypress/test-results/*.html
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
           
-# jobs:
-#   cache-npm-build:
-#     runs-on: ubuntu-20.04
-
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v2
-#           with:
-#             build: npm run build
-
-#       - name: Install dependencies
-#         run: npm install
-
-#       - name: Cache dependencies
-#         uses: actions/cache@v2
-#         with:
-#           build: npm run build
-
-#   test-cypress:
-#     needs: cache-npm-build
-#     runs-on: ubuntu-20.04
-#     container: cypress/browsers:node14.17.0-chrome91-ff89
-#     steps:
-#       - uses: cypress-io/github-action@v2
-#         with:
-#           start: npm run cy:run:reporter
-
-# - uses: actions/checkout@v2
-# #       - uses: cypress-io/github-action@v2
-# #         with:
-# #           build: npm run build
-# #           start: npm run cy:run:reporter
+      # - name: npm run, and report tests
+      #   working-directory: ${{env.work-dir}}
+      #   run: |
+      #     npm run cy:run:reporter
+      
+      # - name: deploy report page to GitHub Page
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
