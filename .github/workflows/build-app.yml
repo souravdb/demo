@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome91-ff89
     env:
-      work-dir: ./app
+      working-directory: ./app
     
     steps:
       - name: checkout repository
