@@ -24,6 +24,9 @@ jobs:
         run: |
           pwd
           ls
+          tree cypress
+          mkdir cypress/test-results
+          mkdir cypress/videos
           cp -r cypress/test-results public/test-results
           cp -r cypress/videos public/videos
         
