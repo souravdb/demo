@@ -30,7 +30,7 @@ const Header = () => {
                         onClick={() => setMenuVisibility(!isMenuVisible)}
                         data-cy="nav-menu-btn"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-4 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                             <title>Menu</title>
                         </svg>
@@ -39,14 +39,14 @@ const Header = () => {
                 <div className={`${isMenuVisible ? 'max-h-full' : 'h-0'} overflow-hidden`}>
                     {categories.map((category, index) => (
                         <Link key={index} href={`/category/${category.slug}`} passHref>
-                            <span data-cy="nav-item" id={`menu-${index}`} className="block sm:invisible mt-2 align-middle text-sm text-white ml-4 font-semibold cursor-pointer">
+                            <span data-cy="nav-item" id={`menu-${index}`} className="block sm:invisible mt-2 align-middle text-sm text-blue-900 ml-4 font-semibold cursor-pointer">
                                 {category.name}
                             </span>
                         </Link>
                     ))}
 
                     <Link href="/" passHref>
-                        <span data-cy="nav-item" id="menu-about" className="block sm:invisible mt-2 align-middle text-sm text-white ml-4 font-semibold cursor-pointer">
+                        <span data-cy="nav-item" id="menu-about" className="block sm:invisible mt-2 align-middle text-sm text-blue-900 ml-4 font-semibold cursor-pointer">
                             About
                         </span>
                     </Link>
@@ -57,14 +57,14 @@ const Header = () => {
                 <div className="invisible sm:visible float-right justify-evenly">
                     {categories.map((category, index) => (
                         <Link key={index} href={`/category/${category.slug}`} passHref>
-                            <span data-cy="nav-item" id={`menu-${index}`} className="mt-2 align-middle text-md text-white ml-4 px-4 font-semibold cursor-pointer">
+                            <span data-cy="nav-item" id={`menu-${index}`} className="mt-2 align-middle text-md text-blue-900 ml-4 px-4 font-semibold cursor-pointer">
                                 {category.name}
                             </span>
                         </Link>
                     ))}
 
                     <Link href="/" passHref>
-                        <span data-cy="nav-item" id="menu-about" className="mt-2 align-middle text-md text-white ml-4 px-4 font-semibold cursor-pointer">
+                        <span data-cy="nav-item" id="menu-about" className="mt-2 align-middle text-md text-blue-900 ml-4 px-4 font-semibold cursor-pointer">
                             About
                         </span>
                     </Link>

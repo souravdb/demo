@@ -25,7 +25,7 @@ const JobDetail = ({ job }) => {
                         alt={job.title}
                         width="100%"
                         height="100%"
-                        src={`/${job.slug}.jpg`}
+                        src={`/images/${job.slug}.jpg`}
                         className="object-top h-full w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
                     />
                 </div>

@@ -1,23 +1,29 @@
 {
 	"private": true,
 	"scripts": {
+		"dev": "next",
 		"build": "next build",
-		"start-server": "next start",
+		"start": "next start",
 		"cy:test": "cypress run --reporter mochawesome",
-		"cy:run:reporter": "start-server-and-test start-server http://localhost:3000 cy:test",
+		"cy:run:reporter": "start-server-and-test start http://localhost:3000 cy:test",
 		"cy:run:chrome": "cypress run --browser chrome",
 		"cy:open": "cypress open",
 		"combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
 		"generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
 	},
 	"dependencies": {
+		"apollo-server-micro": "^3.6.4",
+		"chart.js": "^3.7.1",
 		"graphql": "^16.3.0",
 		"graphql-request": "^4.0.0",
+		"micro": "^9.3.4",
+		"micro-cors": "^0.1.1",
 		"moment": "^2.29.1",
 		"next": "latest",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-markdown": "^8.0.0",
+		"recharts": "^2.1.9",
 		"sass": "^1.49.9",
 		"swr": "^1.2.2"
 	},
