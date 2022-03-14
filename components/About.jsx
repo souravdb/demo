@@ -14,19 +14,6 @@ const About = () => {
 // in this case first the page (html) is rendered, then the function (state) is run
 // **********************************************************************
     useEffect(() => {
-        // const name = 'Sourav, Deb Barma'
-        // const data = {
-        //     // name: 'Sourav, Deb Barma',
-        //     introduction: '> I am **Director of Engineering** projects.',
-        //     education: '- **Bachelors** in Production Engineering, Jadavpur, 1997',
-        //     contactInfo: '- **000 000 8830**\n- *souravxxnow@gmail.com*\n- *Woodstock, GA*',
-        //     // photo: { url: '' }
-        // }
-
-        // const fetchData = async () => {
-        //     const data = await fetch('https://yourapi.com');
-        // }
-
         setName('Sourav, Deb Barma')
         const fetchData = async () => {
             const data = (await getAbout()) || []
@@ -35,10 +22,6 @@ const About = () => {
         
         fetchData()
             .catch(console.error)
-        
-        // await getAbout().then((data) => {
-        //     setAbout(data)
-        // })
     }, [])
 
     return (
@@ -83,38 +66,3 @@ const About = () => {
 }
 
 export default About
-
-// export async function getStaticProps() {
-// 	// const data = (await getAbout()) || []
-// 	const data = {
-// 		name: 'Sourav, Deb Barma',
-// 		introduction: '> I am **Director of Engineering** projects.',
-// 		education: '- **Bachelors** in Production Engineering, Jadavpur, 1997',
-// 		contactInfo: '- **--- --- 8830**\n- *souravd.---@gmail.com*\n- *Woodstock, GA*',
-// 		photo: { url: '' }
-// 	  }
-	
-// 	return {
-// 		props: { about: data },
-// 	}
-// }
-
-
-// export default Home
-
-// (2) The "getStaticProps" (async) function exports data at build time (ahead of user's request)...
-// The data (e.g. "about" data from headless CMS in this case) is exported inside the HTML page component as "props"...
-// export async function getStaticProps() {
-// 	// const data = (await getAbout()) || []
-// 	const data = {
-// 		name: 'Sourav, Deb Barma',
-// 		introduction: '> I am **Director of Engineering** projects.',
-// 		education: '- **Bachelors** in Production Engineering',
-// 		contactInfo: '- **469 803 8830**\n- *souravd.now@gmail.com*\n- *Woodstock, GA*',
-// 		photo: { url: '' }
-// 	  }
-	
-// 	return {
-// 		props: { about: data },
-// 	}
-// }
