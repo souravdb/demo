@@ -3,7 +3,7 @@ import Markdown from 'react-markdown'
 import Image from 'next/image'
 
 // (1) The "getAbout" (async) function will fetch "about" data from Graph CMS...
-// import { getAbout } from '../services'
+import { getAbout } from '../services'
 
 // export default function About({ about }) {    
 const About = () => {
@@ -15,15 +15,18 @@ const About = () => {
 // **********************************************************************
     useEffect(() => {
         // const name = 'Sourav, Deb Barma'
-        const data = {
-            // name: 'Sourav, Deb Barma',
-            introduction: '> I am **Director of Engineering** projects.',
-            education: '- **Bachelors** in Production Engineering, Jadavpur, 1997',
-            contactInfo: '- **000 000 8830**\n- *souravxxnow@gmail.com*\n- *Woodstock, GA*',
-            // photo: { url: '' }
-        }
-        setAbout(data)
+        // const data = {
+        //     // name: 'Sourav, Deb Barma',
+        //     introduction: '> I am **Director of Engineering** projects.',
+        //     education: '- **Bachelors** in Production Engineering, Jadavpur, 1997',
+        //     contactInfo: '- **000 000 8830**\n- *souravxxnow@gmail.com*\n- *Woodstock, GA*',
+        //     // photo: { url: '' }
+        // }
+        
         setName('Sourav, Deb Barma (edited)')
+        getAbout().then((data) => {
+            setAbout(data)
+        })
     }, [])
 
     return (

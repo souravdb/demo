@@ -8,16 +8,16 @@ const Header = () => {
     const [isMenuVisible, setMenuVisibility] = useState(false);
 
     useEffect(() => {
-        // getCategories().then((result) => {
-        //     setCategories(result)
-        // })
+        getCategories().then((data) => {
+            setCategories(data)
+        })
 
-        const data = [
-            {name: 'Engineering', slug: '1', themeColor: 'amber'},
-            {name: 'Consulting', slug: '2', themeColor: 'blue'},
-            {name: 'Leadership', slug: '3', themeColor: 'green'}
-        ]
-        setCategories(data)
+        // const data = [
+        //     {name: 'Engineering', slug: '1', themeColor: 'amber'},
+        //     {name: 'Consulting', slug: '2', themeColor: 'blue'},
+        //     {name: 'Leadership', slug: '3', themeColor: 'green'}
+        // ]
+        // setCategories(data)
     }, [])
 
     return (
