@@ -8,9 +8,17 @@ const Header = () => {
     const [isMenuVisible, setMenuVisibility] = useState(false);
 
     useEffect(() => {
-        getCategories().then((data) => {
+        // getCategories().then((data) => {
+        //     setCategories(data)
+        // })
+
+        const fetchData = async () => {
+            const data = (await getCategories()) || []
             setCategories(data)
-        })
+        }
+        
+        fetchData()
+            .catch(console.error)
 
         // const data = [
         //     {name: 'Engineering', slug: '1', themeColor: 'amber'},

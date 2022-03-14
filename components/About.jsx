@@ -22,11 +22,23 @@ const About = () => {
         //     contactInfo: '- **000 000 8830**\n- *souravxxnow@gmail.com*\n- *Woodstock, GA*',
         //     // photo: { url: '' }
         // }
-        
+
+        // const fetchData = async () => {
+        //     const data = await fetch('https://yourapi.com');
+        // }
+
         setName('Sourav, Deb Barma')
-        getAbout().then((data) => {
+        const fetchData = async () => {
+            const data = (await getAbout()) || []
             setAbout(data)
-        })
+        }
+        
+        fetchData()
+            .catch(console.error)
+        
+        // await getAbout().then((data) => {
+        //     setAbout(data)
+        // })
     }, [])
 
     return (
