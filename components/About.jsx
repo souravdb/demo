@@ -23,7 +23,7 @@ const About = () => {
         //     // photo: { url: '' }
         // }
         
-        setName('Sourav, Deb Barma (edited)')
+        setName('Sourav, Deb Barma')
         getAbout().then((data) => {
             setAbout(data)
         })

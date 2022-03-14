@@ -29,9 +29,9 @@ describe('About Page...', () => {
 		});
 
 		describe('profile', () => {
-			it('Should have image', () => {
+			it('Should have image with title', () => {
 				cy.get('[data-cy=about-pic]').should('exist')
-				cy.get('[data-cy=about-pic]').should('have.attr', 'title').should('contain', 'Sourav, Deb Barma (edited)')
+				cy.get('[data-cy=about-pic]').should('have.attr', 'title').should('contain', 'Sourav, Deb Barma')
 			})
 		})
 
